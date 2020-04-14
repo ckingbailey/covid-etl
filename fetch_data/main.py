@@ -6,13 +6,10 @@ load_dotenv()
 import os
 
 url = 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv'
-gcp_project = "test-python-etl"
-service_account = "service-account_local-dev"
 
 def fetch_data(input):
     data = requests.get(input)
-    text = data.text
-    return text
+    return data.text
 
 def store_data(data):
     try:
