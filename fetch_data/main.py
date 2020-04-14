@@ -11,17 +11,16 @@ service_account = "service-account_local-dev"
 
 def fetch_data(input):
     data = requests.get(input)
-    #text = data.text
-    text = data.text[0:1000]
-    print(text)
+    text = data.text
+    return text
 
-def store_data():
+def store_data(data):
     try:
         # Instantiates a client
         storage_client = storage.Client()
         bucket = storage_client.get_bucket("bucket-data_raw")
         bucket_csv = bucket.blob('data_us_nyt.csv')
-        bucket_csv.upload_from_string("placeholder")
+        bucket_csv.upload_from_string(data)
         print("complete!")
     except Exception as e:
         print(str(e))
@@ -35,4 +34,5 @@ def hello_pubsub(event, context):
     pubsub_message = base64.b64decode(event['data']).decode('utf-8')
     print("Message: " + pubsub_message)
 
-store_data()
+data_fetched = fetch_data(url)
+store_data(data_fetched)
