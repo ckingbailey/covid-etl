@@ -20,7 +20,7 @@ def store_data(data):
     except Exception as e:
         print(str(e))
 
-def main():
+def fetch_and_store():
     url = 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv'
     data_fetched = fetch_data(url)
     store_data(data_fetched)
