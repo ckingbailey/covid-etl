@@ -5,8 +5,6 @@ from dotenv import load_dotenv
 load_dotenv()
 import os
 
-url = 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv'
-
 def fetch_data(input):
     data = requests.get(input)
     return data.text
@@ -22,5 +20,7 @@ def store_data(data):
     except Exception as e:
         print(str(e))
 
-data_fetched = fetch_data(url)
-store_data(data_fetched)
+def fetch_and_store():
+    url = 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv'
+    data_fetched = fetch_data(url)
+    store_data(data_fetched)
