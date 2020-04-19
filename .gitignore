@@ -50,6 +50,7 @@ coverage.xml
 *.py,cover
 .hypothesis/
 .pytest_cache/
+fixtures/
 
 # Translations
 *.mo
@@ -131,5 +132,8 @@ dmypy.json
 # sensitive information
 test-python-etl-*.json
 
+# git
+.DS_Store
 
+# it's personal
 .vscode/

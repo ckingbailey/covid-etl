@@ -1,8 +1,3 @@
-from transform_data.main import transform_data
+from transform_data.main import file_to_dataframe, transform_frame_data
 
-transform_data({
-    'name': 'nom',
-    'hey': 'hoo',
-    'how': 'ho',
-    'hup': 'heedledeedee'
-}, None)
+transform_frame_data(file_to_dataframe('./fixtures/us-counties.csv'))
