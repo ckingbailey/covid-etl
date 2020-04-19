@@ -1,3 +1,4 @@
 .env
 Pipfile*
 test-python-*.json
+__init__.py

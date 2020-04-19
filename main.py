@@ -1,3 +1,3 @@
-from fetch_data.fetch_data import fetch_and_store
+from fetch_data.main import fetch_and_store
 
-fetch_and_store()
+fetch_and_store(None, None)
