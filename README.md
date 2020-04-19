@@ -61,8 +61,9 @@ It's written in Python 3. Colin is using [Pipenv](https://pipenv.pypa.io/en/late
 
 To access Google Cloud Platform resources you'll need a GCP credentials file, and you'll need to point an env var at the location of that file so that the GCP libraries know where to look for it. Ask someone on the project to get a GCP creds JSON for you.
 
-# Project is deployed on Google Cloud Platform
-## Cloud Resources:
+## Deploy
+Project is deployed on Google Cloud Platform.
+### Cloud Resources:
 - Google Cloud Functions
 - Google Cloud Storage buckets
 - Google Cloud Pub/Sub
